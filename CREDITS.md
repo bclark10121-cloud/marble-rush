@@ -13,7 +13,7 @@ Marble Rush is an original game. The track, the toy room, the marbles and the st
 
 ## Fonts
 
-- Fredoka, by The Fredoka Project Authors. SIL Open Font License 1.1 (`fonts/OFL-Fredoka.txt`). https://fonts.google.com/specimen/Fredoka
+- Luckiest Guy, by Astigmatic (AOETI). Apache License 2.0 (`fonts/LICENSE-LuckiestGuy.txt`). https://fonts.google.com/specimen/Luckiest+Guy
 
 ## Made for this game
 
