@@ -10,10 +10,12 @@ Updated 2026-11-20. BC decides the order.
 
 - v0.4.0 (2026-11-20): BC's picks applied (Quirky Dog, Hyperfun, Luckiest Guy, clean toy render, keep the name). The Kitchen, a second track: Counter Top, Dish Rack slalom, Table Run S curves, a spiral into the Mixing Bowl. Menu > Tracks. Each track keeps its own best, stars and ghost.
 
+- v0.5.0 (2026-11-20): BC's full set of picks: Racing pack icon, Galaxy marble (Ruby stays free), Life of Riley, Glitter Blast, wooden toy sounds, the new tagline. New page pictures.
+
 ## Now
 
 - The look pass: toy render marbles and props through Gemini and Meshy, style block approved (BC, 2026-11-20).
-- BC plays 0.4 on his phone. Notes on the Kitchen.
+- BC plays 0.5 on his phone. Notes on the Kitchen, the music and the wooden sounds.
 
 ## Asked for by BC, not built yet
 
@@ -48,3 +50,5 @@ Updated 2026-11-20. BC decides the order.
 - 2026-11-20, 3:08 PM and 3:15 PM: a short boost that cools down before the next use, no big advantage.
 - 2026-11-20, 4:13 PM: decision page picks. Start screen music Quirky Dog. Race music Hyperfun. Title font Luckiest Guy. Art direction clean toy render. Keep Marble Rush, no backup yet. Next track Kitchen.
 - 2026-11-20, 3:34 PM: "first run was good except at the beginning all the marbles went through the floor initially for about 2 seconds and then it starting working correctly. review and then move on to the next release". Fixed in 0.3.0.
+- 2026-11-20, 4:34 PM: "marble run plays good, move to the next release".
+- 2026-11-20, 4:44 PM: decision page picks. APK icon Racing pack. Your marble Galaxy. Start screen scene Toy room run (now). Menu and page colors Toy room warm (now). Title font Luckiest Guy. Art direction clean toy render. Game Shelf card picture Desk Drop pack. Start screen music Life of Riley. Race music Glitter Blast. Sound effects wooden toy. Calm level soft (now). Phone steering slide anywhere (now). Tagline "Eight marbles, one gate, first to the bucket". Keep Marble Rush, no backup yet. Next track Kitchen. Replaces the 4:13 PM music picks.

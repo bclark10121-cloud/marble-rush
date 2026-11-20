@@ -4,10 +4,10 @@ Marble Rush is an original game. The track, the toy room, the marbles and the st
 
 ## Music (found through the Patch.gg asset library)
 
-- Start screen: "Quirky Dog" by Kevin MacLeod (incompetech.com, https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500053)
+- Start screen: "Life of Riley" by Kevin MacLeod (incompetech.com, https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400054)
   Licensed Creative Commons Attribution 4.0 International. https://creativecommons.org/licenses/by/4.0/
   Changes: converted from MP3 to Ogg Vorbis by Patch, re-encoded, brought to -18 LUFS.
-- Races: "Hyperfun" by Kevin MacLeod (incompetech.com, https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400038)
+- Races: "Glitter Blast" by Kevin MacLeod (incompetech.com, https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1900001)
   Licensed Creative Commons Attribution 4.0 International. https://creativecommons.org/licenses/by/4.0/
   Changes: converted from MP3 to Ogg Vorbis by Patch, re-encoded, brought to -18 LUFS.
 
@@ -17,7 +17,7 @@ Marble Rush is an original game. The track, the toy room, the marbles and the st
 
 ## Made for this game
 
-- Marble sounds (clack, the gate, the finish fanfare and the rolling loop) made by `tools/make_marble_sfx.py`.
+- Wooden toy sounds (knocks, the gate, the finish run, menu clicks and the rolling loop) made by `tools/make_marble_sfx.py`.
 - The app icon, drawn in code (`icon_src/`).
 
 ## Tools
