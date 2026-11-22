@@ -36,13 +36,13 @@ Updated 2026-11-22. BC decides the order.
 7. A replay of the finish from a side camera.
 8. A rolling-physics block for the kit if a second game needs it (K rule 1).
 9. A wood floor in the Toy Room. The floor reads pale cream today, and the painted walls have a wood strip along the bottom. Check the brown track still stands out on it (pillar 3).
-10. Sharper walls up close: each wall as two textures side by side (about 13 MB more in the browser build, 58 of 70 MB used today).
+10. Sharper walls up close: each wall as two textures side by side (about 13 MB more in the browser build, 61 of 70 MB used today).
 11. Small motion in the painted room: dust in the sunbeams, twinkling fairy lights on the bunk bed, a toy train far off. Reduce motion holds them still.
 12. Giant props between the track and the walls: a toy chest, a rocking horse, a teddy bear by the bucket.
 
 ## Later
 
-- Before the Kitchen walls: the browser build is 58 of 70 MB (G6.16) because every wall ships in two texture formats. Four more walls the same way would pass the budget. Options: smaller Kitchen textures, one format per platform or a smaller engine build (fresh review note, 0.6.0).
+- Before the Kitchen walls: the browser build is 61 of 70 MB (G6.16) because every wall ships in two texture formats. Four more walls the same way would pass the budget. Options: smaller Kitchen textures, one format per platform or a smaller engine build (fresh review note, 0.6.0).
 - A missing wall painting prints its warning on every Toy Room rebuild, not once (fresh review note).
 - The wall camera check in `_place_cam()` runs every frame of a normal game. Harmless, only test commands set it (fresh review note).
 - `tools/common/release_check.py` looks for `const VERSION: String`, and `main.gd` writes `const VERSION :=`, so that one check passes without checking. A kit matter: propose it to BC for `common/` (fresh review note).
