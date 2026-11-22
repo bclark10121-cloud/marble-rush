@@ -14,9 +14,11 @@ Updated 2026-11-22. BC decides the order.
 
 - v0.6.0 (2026-11-22): HD backgrounds, BC's ask. The Toy Room stands in four painted walls, BC's picks from the decision page: the window seat ahead of the gate, the cubby shelves, the bunk bed with a slide and the chalkboard. Painted at 4K through the Nano Banana art workflow, 2048 x 1152 in the game. Kit 1.27.0.
 
+- v0.6.1 (2026-11-22): a new APK icon, BC's pick from the decision page: Toy Room run. Galaxy leads a red and a green marble down the wood track, with the window wall behind. Painted through the Nano Banana art workflow, fitted to the Android safe zone. Replaces the Racing pack. No gameplay change.
+
 ## Now
 
-- BC plays 0.6 on his phone. Notes on the painted walls: strong enough or too soft, sharp enough up close, frame rate.
+- BC plays 0.6 on his phone and looks at the new icon on his launcher (0.6.1). Notes on the painted walls: strong enough or too soft, sharp enough up close, frame rate.
 - The Kitchen walls, once BC likes the Toy Room (G4.13): a decision page with the window over the sink, the fridge, the stove and shelves and the table side.
 - The rest of the look pass: toy render marbles and props through Gemini and Meshy, style block approved (BC, 2026-11-20).
 - Still open from 0.5: BC's notes on the Kitchen, the music and the wooden sounds.
@@ -42,6 +44,8 @@ Updated 2026-11-22. BC decides the order.
 
 ## Later
 
+- `tools/make_icon.py` stops when a marble reaches past the centre two thirds, but no test makes that guard fail, and no test checks the one-color icon lines up with the painting. Checked by eye in 0.6.1 (fresh review notes).
+- Headless runs end with "resources still in use at exit" after the ok line. Also there on 0.6.0. Not a test failure (0.6.1 build note).
 - Before the Kitchen walls: the browser build is 61 of 70 MB (G6.16) because every wall ships in two texture formats. Four more walls the same way would pass the budget. Options: smaller Kitchen textures, one format per platform or a smaller engine build (fresh review note, 0.6.0).
 - A missing wall painting prints its warning on every Toy Room rebuild, not once (fresh review note).
 - The wall camera check in `_place_cam()` runs every frame of a normal game. Harmless, only test commands set it (fresh review note).
@@ -68,3 +72,4 @@ Updated 2026-11-22. BC decides the order.
 - 2026-11-20, 4:44 PM: decision page picks. APK icon Racing pack. Your marble Galaxy. Start screen scene Toy room run (now). Menu and page colors Toy room warm (now). Title font Luckiest Guy. Art direction clean toy render. Game Shelf card picture Desk Drop pack. Start screen music Life of Riley. Race music Glitter Blast. Sound effects wooden toy. Calm level soft (now). Phone steering slide anywhere (now). Tagline "Eight marbles, one gate, first to the bucket". Keep Marble Rush, no backup yet. Next track Kitchen. Replaces the 4:13 PM music picks.
 - 2026-11-22, 11:59 AM: "I want to add HD graphic backgrounds to the game instead of a blank background." 12:02 PM: "1, decision page". Painted walls (four per track), Toy Room first, picks on the decision page.
 - 2026-11-22, 12:11 PM: decision page picks. "Marble Rush wall picks: Window wall: Window seat. Toy shelf wall: Cubby shelves. Bed wall: Bunk bed with a slide. Door wall: Chalkboard." The four picked drafts are the approved reference art (`art_src/reference/`).
+- 2026-11-22, 4:53 PM: decision page pick. "Marble Rush icon pick: APK icon: Toy Room run." Replaces the Racing pack icon of 2026-11-20. Ships in 0.6.1.
