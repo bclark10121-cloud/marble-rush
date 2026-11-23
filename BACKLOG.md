@@ -16,10 +16,12 @@ Updated 2026-11-22. BC decides the order.
 
 - v0.6.1 (2026-11-22): a new APK icon, BC's pick from the decision page: Toy Room run. Galaxy leads a red and a green marble down the wood track, with the window wall behind. Painted through the Nano Banana art workflow, fitted to the Android safe zone. Replaces the Racing pack. No gameplay change.
 
+- v0.7.0 (2026-11-22): the track look, BC's ask ("can we improve the track and walls of the track?", picks: match the icon, the side rails). Wood grain on Desk Drop, Book Stairs and Block Tower, a woven rug on Rug Run, rounded glossy red and cream rail blocks on both tracks, a rounded divider on the split. Marbles cast shadows on the textured track. No gameplay change.
+
 ## Now
 
+- 0.8.0 Kitchen: BC's four wall picks repainted at 4K (`art_src/nb/bg_kitchen_final/`), the Kitchen surfaces and the browser size plan (59 of 70 MB).
 - BC plays 0.6 on his phone and looks at the new icon on his launcher (0.6.1). Notes on the painted walls: strong enough or too soft, sharp enough up close, frame rate.
-- The Kitchen walls, once BC likes the Toy Room (G4.13): a decision page with the window over the sink, the fridge, the stove and shelves and the table side.
 - The rest of the look pass: toy render marbles and props through Gemini and Meshy, style block approved (BC, 2026-11-20).
 - Still open from 0.5: BC's notes on the Kitchen, the music and the wooden sounds.
 
@@ -44,6 +46,10 @@ Updated 2026-11-22. BC decides the order.
 
 ## Later
 
+- The rug texture has a faint seam every 4 m: `tools/make_track_tex.py` scales the tile after the cross-fade, and scaling does not wrap. Fix in 0.8.0 (fresh review should fix, 0.7.0).
+- No shader warm-up (E2.6). 0.7.0 adds three materials (wood, rug, glossy rails), so their first draw may hitch in the browser (fresh review note).
+- On the Block Tower spiral the wood grain squashes a little on the inner edge (UVs follow the middle line). Fine at speed (fresh review note).
+- The Desk Drop wood reads more orange than the icon's pale wood. One color in `TRACKS` if BC wants it paler.
 - `tools/make_icon.py` stops when a marble reaches past the centre two thirds, but no test makes that guard fail, and no test checks the one-color icon lines up with the painting. Checked by eye in 0.6.1 (fresh review notes).
 - Headless runs end with "resources still in use at exit" after the ok line. Also there on 0.6.0. Not a test failure (0.6.1 build note).
 - Before the Kitchen walls: the browser build is 61 of 70 MB (G6.16) because every wall ships in two texture formats. Four more walls the same way would pass the budget. Options: smaller Kitchen textures, one format per platform or a smaller engine build (fresh review note, 0.6.0).
@@ -73,3 +79,5 @@ Updated 2026-11-22. BC decides the order.
 - 2026-11-22, 11:59 AM: "I want to add HD graphic backgrounds to the game instead of a blank background." 12:02 PM: "1, decision page". Painted walls (four per track), Toy Room first, picks on the decision page.
 - 2026-11-22, 12:11 PM: decision page picks. "Marble Rush wall picks: Window wall: Window seat. Toy shelf wall: Cubby shelves. Bed wall: Bunk bed with a slide. Door wall: Chalkboard." The four picked drafts are the approved reference art (`art_src/reference/`).
 - 2026-11-22, 4:53 PM: decision page pick. "Marble Rush icon pick: APK icon: Toy Room run." Replaces the Racing pack icon of 2026-11-20. Ships in 0.6.1.
+- 2026-11-22, 5:33 PM: "can we improve the track and walls of the track? then move on to another level." Question card picks: "Look, match the icon", "The side rails", "Finish the Kitchen". The Kitchen moves ahead on his word, before his phone notes on the Toy Room walls (G4.13).
+- 2026-11-22, 6:19 PM: decision page picks. "Marble Rush Kitchen wall picks: Sink wall: Window and blue cabinets. Fridge wall: Red fridge and breakfast shelf. Stove wall: Copper hood on blue. Table wall: Garden door and table." The four picked drafts are approved reference art (`art_src/reference/`).
