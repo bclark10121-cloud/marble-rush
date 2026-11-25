@@ -1,6 +1,6 @@
 # Marble Rush: backlog
 
-Updated 2026-11-22. BC decides the order.
+Updated 2026-11-25. BC decides the order.
 
 ## Done
 
@@ -18,9 +18,11 @@ Updated 2026-11-22. BC decides the order.
 
 - v0.7.0 (2026-11-22): the track look, BC's ask ("can we improve the track and walls of the track?", picks: match the icon, the side rails). Wood grain on Desk Drop, Book Stairs and Block Tower, a woven rug on Rug Run, rounded glossy red and cream rail blocks on both tracks, a rounded divider on the split. Marbles cast shadows on the textured track. No gameplay change.
 
+- v0.8.0 (2026-11-25): the Kitchen finished. BC's four painted walls (sink, fridge, stove, garden door and table) and BC's surfaces: butcher block, pale blue tile, a red and cream checked tablecloth and a glazed Mixing Bowl. All eight walls ship as one shared texture each, so the browser build shrank with four more walls in it. The rug seam is gone. Every material draws once out of sight when a track loads, so the first lap no longer stutters on a new material. No gameplay change.
+
 ## Now
 
-- 0.8.0 Kitchen: BC's four wall picks repainted at 4K (`art_src/nb/bg_kitchen_final/`), the Kitchen surfaces and the browser size plan (59 of 70 MB).
+- BC plays 0.8 on his phone: both painted rooms, the Kitchen surfaces, the frame rate and the first seconds of a race.
 - BC plays 0.6 on his phone and looks at the new icon on his launcher (0.6.1). Notes on the painted walls: strong enough or too soft, sharp enough up close, frame rate.
 - The rest of the look pass: toy render marbles and props through Gemini and Meshy, style block approved (BC, 2026-11-20).
 - Still open from 0.5: BC's notes on the Kitchen, the music and the wooden sounds.
@@ -40,25 +42,26 @@ Updated 2026-11-22. BC decides the order.
 7. A replay of the finish from a side camera.
 8. A rolling-physics block for the kit if a second game needs it (K rule 1).
 9. A wood floor in the Toy Room. The floor reads pale cream today, and the painted walls have a wood strip along the bottom. Check the brown track still stands out on it (pillar 3).
-10. Sharper walls up close: each wall as two textures side by side (about 13 MB more in the browser build, 61 of 70 MB used today).
+10. Sharper walls up close: each wall as two textures side by side (about 11 MB more in the browser build with Basis, 62 of 70 MB used today).
 11. Small motion in the painted room: dust in the sunbeams, twinkling fairy lights on the bunk bed, a toy train far off. Reduce motion holds them still.
 12. Giant props between the track and the walls: a toy chest, a rocking horse, a teddy bear by the bucket.
 
 ## Later
 
-- The rug texture has a faint seam every 4 m: `tools/make_track_tex.py` scales the tile after the cross-fade, and scaling does not wrap. Fix in 0.8.0 (fresh review should fix, 0.7.0).
-- No shader warm-up (E2.6). 0.7.0 adds three materials (wood, rug, glossy rails), so their first draw may hitch in the browser (fresh review note).
 - On the Block Tower spiral the wood grain squashes a little on the inner edge (UVs follow the middle line). Fine at speed (fresh review note).
 - The Desk Drop wood reads more orange than the icon's pale wood. One color in `TRACKS` if BC wants it paler.
 - `tools/make_icon.py` stops when a marble reaches past the centre two thirds, but no test makes that guard fail, and no test checks the one-color icon lines up with the painting. Checked by eye in 0.6.1 (fresh review notes).
 - Headless runs end with "resources still in use at exit" after the ok line. Also there on 0.6.0. Not a test failure (0.6.1 build note).
-- Before the Kitchen walls: the browser build is 61 of 70 MB (G6.16) because every wall ships in two texture formats. Four more walls the same way would pass the budget. Options: smaller Kitchen textures, one format per platform or a smaller engine build (fresh review note, 0.6.0).
-- A missing wall painting prints its warning on every Toy Room rebuild, not once (fresh review note).
 - The wall camera check in `_place_cam()` runs every frame of a normal game. Harmless, only test commands set it (fresh review note).
 - `tools/common/release_check.py` looks for `const VERSION: String`, and `main.gd` writes `const VERSION :=`, so that one check passes without checking. A kit matter: propose it to BC for `common/` (fresh review note).
-- Fix the `nofog` test command: it looks for the environment under `world`, but it lives under `stage` (found in the 0.6.0 build, not in play).
-- `project.godot` still lists the 4.6 feature tag. The game runs on 4.7.2.
 - Suno or Patch.gg race music per track.
+
+- Track tiles on Basis Universal: about 1 MB smaller, but the test browser drew the Desk Drop too slowly and the race test failed (0.8.0). Retry once the browser test reads progress, not a 60 s distance.
+- The table wall keeps a thin strip of painted tile at its bottom edge: the chair legs reach the edge (0.8.0 cut 0.003). A repaint with a deeper floor strip fixes it.
+- A pale marble (Pearl, Galaxy's cream side) blends a little into the cream checks on Table Run (0.8.0 look check).
+
+- WARMUP in `race_check.gd` checks a lower bound on materials warmed, not that the marble, ghost and gate materials are among them (fresh review, 0.8.0).
+- `_marble_node()` makes new marble materials each race (E2.3). Godot caches the shaders, so the warm-up still covers them (fresh review note, 0.8.0).
 
 ## Not planned (they break the pillars)
 
@@ -81,3 +84,4 @@ Updated 2026-11-22. BC decides the order.
 - 2026-11-22, 4:53 PM: decision page pick. "Marble Rush icon pick: APK icon: Toy Room run." Replaces the Racing pack icon of 2026-11-20. Ships in 0.6.1.
 - 2026-11-22, 5:33 PM: "can we improve the track and walls of the track? then move on to another level." Question card picks: "Look, match the icon", "The side rails", "Finish the Kitchen". The Kitchen moves ahead on his word, before his phone notes on the Toy Room walls (G4.13).
 - 2026-11-22, 6:19 PM: decision page picks. "Marble Rush Kitchen wall picks: Sink wall: Window and blue cabinets. Fridge wall: Red fridge and breakfast shelf. Stove wall: Copper hood on blue. Table wall: Garden door and table." The four picked drafts are approved reference art (`art_src/reference/`).
+- 2026-11-25, 4:05 PM: question card picks in the desktop app chat. Kitchen track surfaces: "Match the walls (Recommended)": butcher block wood on Counter Top, pale blue tile on Dish Rack, a red and cream checked tablecloth on Table Run, a smooth glazed Mixing Bowl. Release okay: "Yes, full release" (clone game-signing, sign the APK and push 0.8.0 with all six outputs).
